@@ -1,34 +1,30 @@
 @import url(https://fonts.googleapis.com/css2?family=News+Cycle:wght@400;700&display=swap);
-
+/*work on font*/
+/*use bootstrap??????*/
 *, *::after, *::before{
     margin: 0;
     box-sizing: border-box;
-    font-family: News+Cycle, Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'News+Cycle', Verdana, Geneva, Tahoma, sans-serif;
 }
 body{
     padding: 20px;
     background-color: #b7b3b3;
     margin: 0;
     background-image: url('newspaper.jpg');
+    border: rgb(76, 75, 75) solid 8px;
 }
-/* .news-cycle-regular {
-    font-family: "News Cycle", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-  }
-  
-  .news-cycle-bold {
-    font-family: "News Cycle", sans-serif;
-    font-weight: 700;
-    font-style: normal;
-  } */
-  
 header{
-    background-color: rgb(142, 53, 53);
-    color: whitesmoke;
+    background-color: rgba(224, 220, 220, 0.6);
+    color: rgb(76, 75, 75);
     padding: 10px 20px;
     text-align: center;
+    border-radius: 5px;
+    margin: 0;
+    /* font-size: 30px;  */
 }
+#snooze {
+    color: rgb(139, 0, 0);
+} 
 #stories{
     margin-top: 20px;
 }
@@ -38,7 +34,5 @@ header{
     padding: 10px;
     margin-bottom: 10px;
 }
-
-@media (max-width: 600px){
-    /*Mobile responsive adjusments*/
-}
+/*Mobile responsive adjustments*/
+/*font change and border control*/

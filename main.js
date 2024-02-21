@@ -16,22 +16,29 @@ function fetchData(response){
     let apiClips = `https://hacker-news.firebaseio.com/v0/item/${response}.json?print=pretty`
     return fetch(apiClips)
 }
-
 fetch(topStories)
     .then((response)=>{
         return response.json()
     })
-    .then((arr)=>{
-        arr.length = 100
-        let newarr = []
-        for(let item of arr){
-            newarr.push(fetchData(item))
+    .then((array)=>{
+        array.length = 100
+        let newArray = []
+        for(let item of array){
+            newArray.push(fetchData(item))
         }
-        console.log(newarr)
+        console.log(newArray)
+
         //promise.all shorthand from Kyle
-        // Promise.all(arrayOfPromises)
-        // .then((results) =>{Promise.all(results.map(res => res.json()))})
-        // .then((data)=>{
-        //     console.log(data)
+        Promise.all(newArray)
+        .then((results) => Promise.all(results.map(res => res.json())))
+        .then((data)=>{
+            console.log(data)
+            
+            //loop, create element (clips), append to parent, set innerHTML for clips 
+            for (let item of data){
+                let clips = document.createElement('li')
+                clips.innerHTML = `<a href=${item.url}>${item.title}</a></br>By: ${item.by}, Score: ${item.score}, Comments: ${item.descendants}`
+                headlines.appendChild(clips)
+            }
         })
-        //loop, create element (clips), set inner html to url           
+    })
