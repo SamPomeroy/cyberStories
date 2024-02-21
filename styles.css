@@ -1,16 +1,31 @@
+@import url(https://fonts.googleapis.com/css2?family=News+Cycle:wght@400;700&display=swap);
+
 *, *::after, *::before{
     margin: 0;
     box-sizing: border-box;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: News+Cycle, Verdana, Geneva, Tahoma, sans-serif;
 }
 body{
     padding: 20px;
-    background-color: #f4f4f4;
+    background-color: #b7b3b3;
     margin: 0;
+    background-image: url('newspaper.jpg');
 }
+/* .news-cycle-regular {
+    font-family: "News Cycle", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .news-cycle-bold {
+    font-family: "News Cycle", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  } */
+  
 header{
-    background-color: #f60;
-    color: white;
+    background-color: rgb(142, 53, 53);
+    color: whitesmoke;
     padding: 10px 20px;
     text-align: center;
 }
@@ -18,8 +33,8 @@ header{
     margin-top: 20px;
 }
 .story{
-    background-color: white;
-    border: 1px solid #ddd;
+    background-color: green;
+    border: 1px solid pale rgb(155, 190, 155);
     padding: 10px;
     margin-bottom: 10px;
 }
