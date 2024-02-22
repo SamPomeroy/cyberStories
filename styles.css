@@ -36,3 +36,16 @@ header{
 }
 /*Mobile responsive adjustments*/
 /*font change and border control*/
+@media(max-width: 600px){
+     html {
+         font-size: 12px + 2 *((100vw -360px) / 768px)
+    }
+}
+ @media(min-width: 470px){
+     html {
+        font-size: 10px + 10 *((100vw -769px) / 2048px)
+     }
+}
+html {
+    font-size: 16px;
+}
